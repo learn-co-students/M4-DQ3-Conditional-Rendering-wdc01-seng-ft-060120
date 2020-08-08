@@ -2,7 +2,7 @@ export const userData = {
 	name: "Dude McPherson",
 	description: "Just a dude bein' a dude.",
 	catchphrase: "Whoa...",
-	age: 26,
+	age: 26
 }
 
 export const photo = {
