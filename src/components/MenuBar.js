@@ -12,22 +12,25 @@ const MenuBar = (props) => {
   this component be made aware of what is currently the active menu item?
 
   */
+  const activeClass = (button) => {
+    return (props.active === button ? "item active" : "item")
+  }
 
   return (
     <div className="ui four item menu">
-      <a className="item active" id="profile">
+      <a className={activeClass("profile")} id="profile" onClick={() => props.toggleButton("profile")}>
         <i className="user large icon" id="profile"/>
       </a>
 
-      <a className="item" id="photo">
+      <a className={activeClass("photo")} id="photo" onClick={() => props.toggleButton("photo")}>
         <i className="photo large icon" id="photo"/>
       </a>
 
-      <a className="item" id="cocktail">
+      <a className={activeClass("cocktail")} id="cocktail" onClick={() => props.toggleButton("cocktail")}>
         <i className="cocktail large icon" id="cocktail"/>
       </a>
 
-      <a className="item" id="pokemon"> 
+      <a className={activeClass("pokemon")} id="pokemon" onClick={() => props.toggleButton("pokemon")}> 
         <i className=" themeisle large icon" id="pokemon"/>
       </a>
     </div>
